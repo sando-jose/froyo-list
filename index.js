@@ -8,20 +8,23 @@
 //}
 
 //Started over, and learned .forEach, .trim, and more short-hands that can be used
-let input = prompt("Please enter a comma-separated list of froyo flavors:");
+let input = prompt(
+  "Please enter a comma-separated list of froyo flavors:",
+  "vanilla,vanilla,vanilla,strawberry,coffee,coffee"
+);
 
 let flavors = input.split(",");
 
 let froyoCounts = {};
-flavor.forEach((flavor) => {
+flavors.forEach((flavor) => {
   // Triming in case they add unnecessary spaces
-  flavor = flavor.trim();
+  flavors = flavor.trim();
   if (flavor in froyoCounts) {
-    froyoCounts[flavor]++;
+    froyoCounts[flavors]++;
   } else {
     froyoCounts[flavor] = 1;
   }
 });
 
 console.log("Flavor Counts:");
-console.table(flavorCounts);
+console.table(froyoCounts);
